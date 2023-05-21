@@ -2,8 +2,8 @@
 
 echo "This will require sudo rights!"
 cd /tmp
-curl https://raw.githubusercontent.com/Wonakiri/logscan/main/logscan > scanlog
+curl https://raw.githubusercontent.com/Wonakiri/logscan/main/logscan > logscan
 
-mv /tmp/scanlog /bin
+mv logscan /bin
 
 exit 0
