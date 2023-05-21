@@ -1,0 +1,41 @@
+#!/bin/bash
+
+if [[ $1 == "-u" ]]; then
+    echo "Starting update process!"
+    cd /tmp
+    curl https://raw.githubusercontent.com/Wonakiri/logscan/main/update.sh > logscanupdaterprocess.sh
+    chmod +x ./logscanupdaterprocess.sh
+    exec logscanupdaterprocess.sh
+    exit 0
+fi
+
+if [[ -z $1 ]]; then
+    echo "Usage: $0 <log_file> or $0 -u"
+    exit 1
+fi
+
+log_file="$1"
+keywords=("error" "warning" "failed" "exception" "denied" "invalid" "null" "undefined" "refused" "fatal" "timeout" "warn")
+
+orange="\033[1;31m"
+reset="\033[0m"
+
+if [[ ! -f $log_file ]]; then
+    echo "Log file not found: $log_file"
+    exit 1
+fi
+
+while IFS= read -r line; do
+    lowercase_line=$(echo "$line" | tr '[:upper:]' '[:lower:]')
+    
+    for keyword in "${keywords[@]}"; do
+        lowercase_keyword=$(echo "$keyword" | tr '[:upper:]' '[:lower:]')
+        
+        if [[ "$lowercase_line" == *"$lowercase_keyword"* ]]; then
+            echo "Potential issue found:"
+            echo -e "${orange}$line${reset}"
+            echo
+            break
+        fi
+    done
+done < "$log_file"
