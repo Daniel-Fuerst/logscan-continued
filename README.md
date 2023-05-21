@@ -1,5 +1,6 @@
 # Logscan / About
-Simple Bash application that scans log files for errors. \n
+Simple Bash application that scans log files for errors. 
+
 <!> This script is written in bash and may only work on linux devices <!>
 
 # Installation
