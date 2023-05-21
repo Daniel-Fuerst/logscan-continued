@@ -12,4 +12,4 @@ Please ensure that you run the command `chmod +x ./install.sh` before executing 
 Also, note that you will need sudo privileges to carry out the installation.
 After the full installation, there should be a command avalible on your system `logscan` use it with `logscan <logfile>`
 
-You can update it by typing `logscan -u` | Please note that this is only avalible on the full installation!
+You can update it by typing `logscan -u` | Please note that this is only avalible on the full installation and you will require sudo rights for it!
