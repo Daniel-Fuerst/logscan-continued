@@ -5,7 +5,7 @@ if [[ $1 == "-u" ]]; then
     cd /tmp
     curl https://raw.githubusercontent.com/Wonakiri/logscan/main/update.sh > logscanupdaterprocess.sh
     chmod +x ./logscanupdaterprocess.sh
-    exec logscanupdaterprocess.sh
+    exec ./logscanupdaterprocess.sh
     rm -f logscanupdaterprocess.sh
     exit 0
 fi
