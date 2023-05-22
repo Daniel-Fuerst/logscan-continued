@@ -11,6 +11,8 @@ keywords=("error" "warning" "failed" "exception" "denied" "invalid" "null" "unde
 red="\033[1;31m"
 reset="\033[0m"
 
+echo "Potential issues: "
+
 while IFS= read -r line; do
     lowercase_line=$(echo "$line" | tr '[:upper:]' '[:lower:]')
     
@@ -18,7 +20,7 @@ while IFS= read -r line; do
         lowercase_keyword=$(echo "$keyword" | tr '[:upper:]' '[:lower:]')
         
         if [[ "$lowercase_line" == *"$lowercase_keyword"* ]]; then
-            echo "Potential issue found:"
+            #echo "Potential issue found:"
             echo -e "${red}$line${reset}"
             echo
             break
