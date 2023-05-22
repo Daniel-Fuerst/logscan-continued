@@ -13,3 +13,6 @@ Also, note that you will need sudo privileges to carry out the installation.
 After the full installation, there should be a command avalible on your system `logscan` use it with `logscan <logfile>`
 
 You can update it by typing `logscan -u` | Please note that this is only avalible on the full installation and you will require sudo rights for it!
+
+# Anything else?
+Contact me at none.daniel0@gmail.com
