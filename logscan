@@ -21,6 +21,8 @@ keywords=("error" "warning" "failed" "exception" "denied" "invalid" "null" "unde
 orange="\033[1;31m"
 reset="\033[0m"
 
+echo "Potential issues: "
+
 if [[ ! -f $log_file ]]; then
     echo "Log file not found: $log_file"
     exit 1
@@ -33,7 +35,7 @@ while IFS= read -r line; do
         lowercase_keyword=$(echo "$keyword" | tr '[:upper:]' '[:lower:]')
         
         if [[ "$lowercase_line" == *"$lowercase_keyword"* ]]; then
-            echo "Potential issue found:"
+            #echo "Potential issue found:"
             echo -e "${orange}$line${reset}"
             echo
             break
