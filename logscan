@@ -1,5 +1,5 @@
 #!/bin/bash
-#error
+#test
 
 if [[ $1 == "-u" ]]; then
     echo "Starting update process!"
