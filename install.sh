@@ -8,6 +8,6 @@ mkdir bin
 cd ~/bin
 
 mv /tmp/logscan ~/bin
-
+chmod +x logscan
 echo 'export PATH=~/bin:$PATH' >> ~/.bashrc
 exit 0
