@@ -6,9 +6,8 @@ curl https://raw.githubusercontent.com/Wonakiri/logscan/main/logscan > logscan
 cd ~
 mkdir bin
 cd ~/bin
-mkdir logscan-files
 
-mv /tmp/logscan ~/bin/logscan-files
+mv /tmp/logscan ~/bin
 
-echo "export PATH=~/bin:$PATH" >> ~/.bashrc
+echo 'export PATH=~/bin:$PATH' >> ~/.bashrc
 exit 0
