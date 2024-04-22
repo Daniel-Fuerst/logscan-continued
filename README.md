@@ -15,4 +15,4 @@ After the full installation, there should be a command avalible on your system `
 You can update it by typing `logscan -u` | Please note that this is only avalible on the full installation and you will require sudo rights for it!
 
 # Anything else?
-Contact me at none.daniel0@gmail.com
+Contact me at daniel@fuerst.priv.at
